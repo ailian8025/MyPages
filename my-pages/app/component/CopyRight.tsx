@@ -1,6 +1,6 @@
 import { Link, Typography } from "@mui/material";
 
-export default function Copyright() {
+export default function CopyRight() {
     return (
       <Typography
         variant="body2"

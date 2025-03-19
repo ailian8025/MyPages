@@ -1,6 +1,5 @@
 import {
   isRouteErrorResponse,
-  Link,
   Links,
   Meta,
   Outlet,
@@ -10,9 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import { Typography,Link as MLink } from "@mui/material";
 import createEmotionCache from "./utils/createEmotionCache";
-import { CacheProvider } from "@emotion/react";
 
 const cache = createEmotionCache();
 
@@ -31,7 +28,6 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <CacheProvider value={cache}>
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
@@ -40,19 +36,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/material_ui">Material UI</Link></li>
-          </ul>
-        </nav>
         {children}
-        {/* <Copyright /> */}
         <ScrollRestoration />
         <Scripts />
       </body>
     </html>
-    </CacheProvider>
   );
 }
 
