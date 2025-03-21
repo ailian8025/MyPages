@@ -46,3 +46,10 @@ This is correct, but if the issue persists, try importing it like this:
 ```js
 import { Button } from "@mui/material";
 ```
+
+## About Material UI
+- Stack
+- Typography
+- styled()
+- sx
+- xs,md

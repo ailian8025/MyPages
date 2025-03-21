@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import CopyRight from "~/component/CopyRight";
+import CopyRight from "~/component/Footer";
 
 const ArticleList: React.FC = () => {
   // Example article data
@@ -26,8 +26,6 @@ const ArticleList: React.FC = () => {
           ))}
         </ul>
       </div>
-      <Outlet />
-      <CopyRight />
     </>
   );
 };
