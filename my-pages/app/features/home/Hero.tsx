@@ -1,6 +1,5 @@
 import { Box, Button, Container, InputLabel, Link, Stack, styled, TextField, Typography } from "@mui/material";
 import visuallyHidden from '@mui/utils/visuallyHidden';
-import githubImage from '../../../public/github.png';
 
 const StyledBox = styled('div')(({ }) => ({
     alignSelf: 'center',
@@ -10,7 +9,7 @@ const StyledBox = styled('div')(({ }) => ({
     borderRadius: 8,
     outline: '6px solid',
     outlineColor: 'hsla(220, 25%, 80%, 0.2)',
-    backgroundImage: `url(${githubImage})`,
+    backgroundImage: `url(/github.png)`,
     boxShadow: '0 0 12px 8px hsla(220, 25%, 80%, 0.2)',
     backgroundSize: 'cover',
   }));

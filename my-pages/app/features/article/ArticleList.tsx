@@ -1,6 +1,7 @@
+import { Container } from "@mui/material";
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
-import CopyRight from "~/component/Footer";
+import MainContent from "./MainContent";
+import Latest from "./Latest";
 
 const ArticleList: React.FC = () => {
   // Example article data
@@ -12,20 +13,14 @@ const ArticleList: React.FC = () => {
 
   return (
     <>
-      <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-        <h1>Article List</h1>
-        <p>Browse through our collection of articles:</p>
-        <ul>
-          {articles.map((article) => (
-            <li key={article.id} style={{ marginBottom: "10px" }}>
-              <Link to={`/article/${article.id}`} style={{ textDecoration: "none", color: "blue" }}>
-                <h2>{article.title}</h2>
-                <p>{article.summary}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Container
+        maxWidth="lg"
+        component="main"
+        sx={{ display: 'flex', flexDirection: 'column', my: 16}}
+      >
+        <MainContent />
+        <Latest />
+      </Container>
     </>
   );
 };

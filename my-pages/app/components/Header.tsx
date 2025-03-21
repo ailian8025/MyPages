@@ -1,5 +1,6 @@
 import { alpha, AppBar, Box, Button, Container, createTheme, styled, Toolbar, type Shadows } from "@mui/material";
-import Sitemark from './SitemarkIcon';
+import { SitemarkIcon } from './Icons';
+import { Link } from "react-router";
 
 const borderRadius = 8
 
@@ -39,7 +40,7 @@ const StyledToolbar = styled(Toolbar)(({  }) => ({
 export default function Header() {
   return (
     <AppBar
-    // position="fixed"
+    position="static"
     enableColorOnDark
     sx={{
       boxShadow: 0,
@@ -51,7 +52,7 @@ export default function Header() {
     <Container maxWidth="lg">
       <StyledToolbar variant="dense" disableGutters>
         <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-          <Sitemark />
+          <SitemarkIcon />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Button variant="text" color="info" size="small">
               Features
@@ -69,7 +70,9 @@ export default function Header() {
               FAQ
             </Button>
             <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
-              Blog
+              <Link to={`/article`} style={{ textDecoration: "none"}}>
+                Blog
+              </Link>
             </Button>
           </Box>
         </Box>
@@ -81,7 +84,9 @@ export default function Header() {
           }}
         >
           <Button color="primary" variant="text" size="small">
-            Sign in
+            <Link to={`/login`} style={{ textDecoration: "none"}}>
+              Sign in
+            </Link>
           </Button>
           <Button color="primary" variant="contained" size="small">
             Sign up

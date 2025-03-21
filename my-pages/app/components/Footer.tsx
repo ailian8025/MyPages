@@ -2,7 +2,7 @@ import { Box, Button, Container, IconButton, InputLabel, Link, Stack, TextField,
 import FacebookIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/X';
-import SitemarkIcon from "./SitemarkIcon";
+import { SitemarkIcon } from "./Icons";
 
 function Copyright() {
     return (

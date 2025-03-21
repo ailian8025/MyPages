@@ -10,7 +10,7 @@ import { type RouteConfig, index, layout, route } from "@react-router/dev/routes
 */
 export default [
     index("features/home/Home.tsx"), // Home page
-    layout("./component/Layout.tsx", [
+    layout("./components/Layout.tsx", [
         route("article", "features/article/ArticleList.tsx"), // Article list page
         route("article/:id", "features/article/ArticleDetail.tsx"), // Specific article page
       ]),
